@@ -5,6 +5,7 @@
 
 
 import os
+from os import path
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -28,9 +29,13 @@ def form_tambah_email():
     print("Email berhasil ditambahkan!!\n")
     
 def read_data_txt():
-    fread = open("receiver_list.txt","r")
-    print(fread.read())
-    fread.close()
+    if(path.exists("receiver_list.txt")):
+        fread = open("receiver_list.txt","r")
+        print(fread.read())
+        fread.close()
+    else:
+        f = open("receiver_list.txt", "w+")
+        f.close()
     
 def remove_txt():
     os.remove("receiver_list.txt")
