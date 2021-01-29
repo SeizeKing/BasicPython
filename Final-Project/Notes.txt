@@ -1,3 +1,7 @@
 Pengiriman account gmail
+
 https://myaccount.google.com/lesssecureapps
 untuk mengaktifkan less secure apps
+
+referensi
+https://www.tutorialspoint.com/send-mail-from-your-gmail-account-using-python
